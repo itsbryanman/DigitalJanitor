@@ -13,7 +13,7 @@ Digital Janitor is a CLI-first, content-addressable backup platform designed for
 
 ---
 
-## ✨ Highlights
+##  Highlights
 
 - **Deduplicated Storage** – variable-size chunking with content-addressable objects keeps repositories small.
 - **Strong Encryption** – AES-256-GCM backed by Argon2id key derivation protects data at rest.
@@ -25,7 +25,7 @@ Digital Janitor is a CLI-first, content-addressable backup platform designed for
 
 ---
 
-## 📦 What’s in this Repository?
+##  What’s in this Repository?
 
 | Path | Purpose |
 |------|---------|
@@ -42,7 +42,7 @@ All artifacts required to build, test, and ship to early adopters are included. 
 
 ---
 
-## 🚀 Quick Start for Test Users
+##  Quick Start for Test Users
 
 ```bash
 # 1. Clone and enter the project
@@ -68,7 +68,7 @@ To revert between repositories, simply change `DJ_REPO`. Password-protected repo
 
 ---
 
-## 🐳 Docker Release Build
+##  Docker Release Build
 
 The provided `Dockerfile` yields production-ready images with both CLI binaries.
 
@@ -95,7 +95,7 @@ Use the `HEALTHCHECK` baked into the image to wire Digital Janitor into orchestr
 
 ---
 
-## 🧪 Build, Lint, and Test
+##  Build, Lint, and Test
 
 The repository is configured to pass Clippy and unit/integration suites. Run everything locally before shipping to testers:
 
@@ -122,7 +122,7 @@ Smoke-test the binaries:
 
 ---
 
-## ⚙️ Configuration Cheat Sheet
+##  Configuration Cheat Sheet
 
 | Variable | Description | Example |
 |----------|-------------|---------|
@@ -142,7 +142,7 @@ sftp://user@host:22/path/to/repo
 
 ---
 
-## 🗃️ Common Workflows
+## Common Workflows
 
 ### Initialize & Inspect
 ```bash
@@ -180,7 +180,7 @@ sudo target/release/dj mount --repo $DJ_REPO --mount-point /mnt/dj --allow-other
 
 ---
 
-## 🛠️ Development Guide
+## Development Guide
 
 1. **Install toolchain** – Rust 1.75+, `libfuse3-dev`, OpenSSL, and Docker (optional).
 2. **Set up environment** – `rustup component add clippy rustfmt`.
@@ -192,7 +192,7 @@ Integration tests rely on temporary repositories and require no external service
 
 ---
 
-## ❓ Troubleshooting
+##  Troubleshooting
 
 | Symptom | Likely Cause | Fix |
 |---------|--------------|-----|
@@ -205,13 +205,13 @@ For more help, file an issue or reach out to support.
 
 ---
 
-## ☕ Support the Project
+##  Support the Project
 
-If Digital Janitor saves your bacon, consider buying a coffee: [https://buymeacoffee.com/bryanc910](https://buymeacoffee.com/bryanc910)
+If you liked Digital Janitor , consider buying a coffee: [https://buymeacoffee.com/bryanc910](https://buymeacoffee.com/bryanc910)
 
 ---
 
-## 📄 License
+##  License
 
 Digital Janitor is released under the MIT License. See [LICENSE](LICENSE) for details.
 
