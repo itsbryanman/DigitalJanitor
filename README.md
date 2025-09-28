@@ -95,32 +95,7 @@ Use the `HEALTHCHECK` baked into the image to wire Digital Janitor into orchestr
 
 ---
 
-##  Build, Lint, and Test
 
-The repository is configured to pass Clippy and unit/integration suites. Run everything locally before shipping to testers:
-
-```bash
-# Format
-cargo fmt --all
-
-# Lint (fails on warnings)
-cargo clippy --all-targets --all-features -- -D warnings
-
-# Core tests
-cargo test
-
-# Full feature matrix (mount + server + pve agent)
-cargo test --all-features
-```
-
-Smoke-test the binaries:
-
-```bash
-./target/debug/dj repo stats --help
-./target/debug/dj-pve-agent --help
-```
-
----
 
 ##  Configuration Cheat Sheet
 
