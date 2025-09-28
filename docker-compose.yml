@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  dj:
+    build: .
+    image: digital-janitor:latest
+    container_name: digital-janitor
+    environment:
+      DJ_REPO: file:///data/repository
+      DJ_PASSWORD_FILE: /run/secrets/dj_password
+      RUST_LOG: info
+    volumes:
+      - repo-data:/data
+      - ./backups:/source:ro
+    secrets:
+      - dj_password
+    working_dir: /data
+    entrypoint: ["dj"]
+    command: ["--help"]
+    # Run commands with: docker compose run --rm dj snapshot list
+
+secrets:
+  dj_password:
+    file: ./secrets/dj_password.txt
+
+volumes:
+  repo-data:
+    driver: local

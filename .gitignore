@@ -1,0 +1,38 @@
+# Rust
+/target/
+Cargo.lock
+
+# IDE
+/.vscode/
+/.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test files
+test_data/
+*.tmp
+
+# Secrets
+secrets/
+*.key
+*.pem
+
+# Build artifacts
+releases/
+dist/
+
+# Local configuration
+.env
+.env.local
+
+# Backup repositories (for testing)
+/test_repo/
+/backup_test/

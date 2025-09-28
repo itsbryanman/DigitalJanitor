@@ -1,0 +1,17 @@
+# Digital Janitor automated backup schedule
+# This crontab file can be used with the scheduler container
+
+# Environment variables
+DJ_REPO=/data/repository
+BACKUP_PATHS=/backups
+BACKUP_TAGS=automated,cron
+PATH=/usr/local/bin:/usr/bin:/bin
+
+# Daily backup at 2 AM
+0 2 * * * dj /scripts/example-backup.sh >> /var/log/dj-backup.log 2>&1
+
+# Weekly repository check on Sundays at 3 AM
+0 3 * * 0 dj dj repo check --repo $DJ_REPO >> /var/log/dj-check.log 2>&1
+
+# Monthly pruning on the first day of each month at 4 AM
+0 4 1 * * dj dj repo prune --repo $DJ_REPO --keep-daily 30 --keep-weekly 12 --keep-monthly 6 --keep-yearly 2 >> /var/log/dj-prune.log 2>&1
